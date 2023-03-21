@@ -15,19 +15,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Movie List',
-      debugShowCheckedModeBanner: false,
-      home: Navigator(
-        pages: const [
-          MaterialPage(child: HomePage()),
-        ],
-        onPopPage: (route, result) {
-          if (!route.didPop(result)) return false;
-
-          return true;
-        },
-      ),
-    );
+    return const MaterialApp(
+        title: 'Movie List',
+        debugShowCheckedModeBanner: false,
+        home: HomePage());
   }
 }
